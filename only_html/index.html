@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ХАС ГРУПП &mdash; управляющая компания</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #252321;
+        }
+        .top-logo {
+            background-color: #252321;
+        }
+        .nav-bg {
+            background-color: #ac8a5d;
+        }
+        .nav-link, .nav-link:visited {
+            color: #242321;
+            font-size: 1.1em;
+            line-height: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .nav-link:hover {
+            color: #6c5510;
+        }
+        .nav-link.active, .nav-link.active:hover, .nav-link.active:visited {
+            color: #d9b37c;
+        }
+        .search-field {
+            border: 0 solid transparent !important;
+            border-radius: 0 !important;
+            height: 48px;
+            padding-left: 48px;
+            background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath fill='%23231F20' d='M12.2,23.5c2.7,0,5.3-1,7.3-2.7l9.9,9.9c0.2,0.2,0.4,0.3,0.7,0.3c0.2,0,0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.3 l-9.9-9.9c3.7-4.4,3.5-11-0.7-15.2C18.1,2.2,15.2,1,12.2,1S6.4,2.2,4.3,4.3c-4.4,4.4-4.4,11.5,0,15.9C6.4,22.4,9.2,23.5,12.2,23.5z M5.6,5.6c1.8-1.8,4.1-2.7,6.6-2.7s4.9,1,6.6,2.7c3.7,3.7,3.7,9.6,0,13.3c-1.8,1.8-4.1,2.7-6.6,2.7s-4.9-1-6.6-2.7 C2,15.2,2,9.3,5.6,5.6z'/%3E%3C/svg%3E");
+            background-color: #d9b37c !important;
+            background-position: 8px 8px;
+        }
+        .logo-panel-link, .logo-panel-link:visited {
+            color: #d9b37c;
+            font-size: 1.1em;
+            line-height: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .logo-panel-link:hover {
+            color: #ac8a5d;
+        }
+        a.sub-link {
+            color: #fff;
+            font-size: 1.1em;
+            line-height: 1.2em;
+            text-decoration: none;
+        }
+        a:hover.sub-link {
+            color: #d9b37c;
+        }
+        a:active.sub-link {
+            color: #fff;
+        }
+        .structure {
+            margin-top: -10px;
+            margin-left: -10px;
+            line-height: 2em;
+        }
+        .structure li::marker {
+            content: '▸ ';
+            font-size: 1.75em;
+            line-height: 0em;
+        }
+        .header::before {
+            content: "■■";
+            letter-spacing: -0.5em;
+            color: #e1230f;
+            padding-right: .75em;
+        }
+        .header {
+            font-size: 1.75em;
+        }
+        .sub-header::before {
+            content: "■■";
+            letter-spacing: -0.5em;
+            color: #fff;
+            padding-right: .75em;
+        }
+        .sub-header {
+            font-size: 1.75em;
+        }
+        .header-tri::before {
+            content: ' ';
+            width: 32px;
+            height: 32px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 0,32 16,16' style='fill:%23e1230f;'/%3E%3C/svg%3E");
+            display: inline-block;
+        }
+        .header-tri {
+            margin-bottom: -.25em;
+            font-size: 3em;
+        }
+        .header-over-pic::before {
+            content: ' ';
+            width: 32px;
+            height: 32px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,4 0,32 4,32 18,18 4,4' style='fill:%23fff;'/%3E%3Cpolygon points='0,4 0,32 14,18' style='fill:%23e1230f;'/%3E%3C/svg%3E");
+            display: inline-block;
+            margin-left: -1.25em;
+            margin-right: .25em;
+            text-shadow: 5px 0 #fff;
+        }
+        .header-over-pic {
+            margin-left: 1em;
+            font-size: 2em;
+            line-height: 1.1em;
+            color: #fff;
+        }
+        .copyright {
+            color: #d9b37c;
+            font-size: .7em;
+            line-height: .7em;
+        }
+        .bottom-text {
+            color: #d9b37c;
+            font-size: 1.1em;
+            line-height: 1.1em;
+        }
+        .bottom-text ul {
+            margin-left: -1.25em;
+        }
+        .bottom-text li::marker {
+            content: '- ';
+        }
+        .bottom-text a, a:active, a:visited {
+            color: #d9b37c;
+            text-decoration: none;
+        }
+        .bottom-text a:hover {
+            color: #ac8a5d;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container-fluid p-3 top-logo">
+        <div class="container">
+            <img src="/img/logo.svg" width="336" height="72" class="ms-2"/>
+            <div class="float-end me-3">
+                <p class="text-end">
+                    <a href="tel:+78003020500" class="logo-panel-link">8 800 30-20-500</a><br>
+                    <a href="tel:+74162496777" class="logo-panel-link">(4162) 496-777</a><br>
+                    <a href="https://t.me/?" class="logo-panel-link"><img src="/img/tg-icon.svg" width="20" height="20" class="ms-2"/></a>
+                    <a href="https://wa.me/?" class="logo-panel-link"><img src="/img/wa-icon.svg" width="20" height="20" class="ms-2"/></a>
+                </p>
+            </div>
+            <div class="float-end me-5">
+                <span style="color: #e1230f; line-height: .65em; font-size: 3em; transform: scale(1, 2);" class="float-start me-2">▸</span>
+                <span class="float-end"><a href="/for-stuff" class="logo-panel-link">личный<br>кабинет</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid nav-bg">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link ps-2 pe-3 active">ГЛАВНАЯ</a></li>
+                    <li><a href="/about" class="nav-link px-3">О КОМПАНИИ</a></li>
+                    <li><a href="/production" class="nav-link px-3">ПРОИЗВОДСТВО</a></li>
+                    <li><a href="/questions" class="nav-link px-3">ВОПРОС/ОТВЕТ</a></li>
+                    <li><a href="/career" class="nav-link px-3">ВАКАНСИИ</a></li>
+                    <li><a href="/contacts" class="nav-link px-3">КОНТАКТЫ</a></li>
+                </ul>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control search-field">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-fluid" style="background-image: url('/img/fp-top.jpg'); background-size: cover; height: 632px;">
+    <div class="container">
+        <div class="row"><div class="col-1 pt-5"></div></div>
+        <div class="row">
+            <div class="ms-3 p-3 col-5" style="background: #ac8a5dc0;">
+                <h3 class="text-white">Упраляющая компания</h3>
+                <h1 class="text-white">ХАС ГРУПП</h1>
+                <div class="d-inline-flex" style="background: #e1230f; width: 5em; height: 5px;"></div>
+                <div class="d-inline-flex" style="margin-left: -5px; background: #000; width: 5em; height: 5px;"></div>
+                <ul class="structure pt-3">
+                    <li><a href="/structure/maristy" class="sub-link">ООО Маристый</a></li>
+                    <li><a href="/structure/mogot" class="sub-link">ООО Могот</a></li>
+                    <li><a href="/structure/dambuki" class="sub-link">ПАО Прииск Дамбуки</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-white">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-7">
+                <div class="header">ДОБЫЧА ЗОЛОТА</div>
+                <div class="pt-2">Мы смело смотрим в будущее и открываем новые горизонты. Эффективность и ответственность, честность и уважение &mdash; наши незыблемые принципы. Добыча металла, предоставление рабочих мест, налоги &mdash; это ответственность, которую несет компания перед государством и людьми. Наши три кита: прииск Маристый, прииск Могот и прииск Дамбуки. Компания регулярно покупает лицензии на добычу рассыпного золота. При добыче золота важна работа каждого специалиста. Поэтому большое значение в компании придается заботе о людях.</div>
+            </div>
+            <div class="col-5 d-flex justify-content-end">
+                <img src="/img/fp-gold.jpg" class="rounded-circle" width="360" height="360">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-white">
+    <div class="container">
+        <div class="row pt-5 pb-3">
+            <div class="col-12 header">ПРЕИМУЩЕСТВА КОМПАНИИ</div>
+        </div>
+        <div class="row pb-4">
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/backhoe-bg.jpg'); background-position: center; background-size: cover; height: 250px;">
+                    <div class="header-over-pic">СИЛЬНАЯ<br>ТЕХНИЧЕСКАЯ<br>БАЗА
+                        <br><img src="/img/backhoe-icon.svg" width="64" height="64"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/worker-bg.jpg'); background-position: center; background-size: cover; height: 250px;">
+                    <div class="header-over-pic">СПЕЦИАЛИСТЫ<br>ВЫСОКОЙ<br>КВАЛИФИЦИИ
+                        <br><img src="/img/worker-icon.svg" width="64" height="64"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/tools-bg.jpg'); background-position: center; background-size: cover; height: 250px;">
+                    <div class="header-over-pic">МНОЖЕСТВО<br>ЛИЦЕНЗИЙ<br>НА РАЗРАБОТКУ
+                        <br><img src="/img/tools-icon.svg" width="64" height="64"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/shield-bg.jpg'); background-position: center; background-size: cover; height: 250px;">
+                    <div class="header-over-pic">ВЫСОКАЯ СТЕПЕНЬ<br>БЕЗОПАСНОСТИ<br>ТРУДА
+                        <br><img src="/img/shield-icon.svg" width="64" height="64"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/care-bg.jpg'); background-position: center; background-size: cover; height: 250px;">
+                    <div class="header-over-pic">СОЦИАЛЬНАЯ<br>ОТВЕТСТВЕННОСТЬ<br>ЗА СОТРУДНИКОВ
+                        <br><img src="/img/care-icon.svg" width="64" height="64"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/leader-bg.jpg'); background-position: center; background-size: cover; height: 250px;">
+                    <div class="header-over-pic">ОДНИ ИЗ<br>ЛИДЕРОВ<br>РЫНКА
+                        <br><img src="/img/leader-icon.svg" width="64" height="64"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="background: #e5e5e5;">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-7">
+                <div class="header">НАША ДЕЯТЕЛЬНОСТЬ</div>
+                <div class="pt-2 px-0 container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="header-tri">2010</div>
+                            год основания<br>компании
+                        </div>
+                        <div class="col-6"><div class="header-tri">3</div>
+                            рудника: Маристый, Могот,<br>прииск Дамбуки
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-6">
+                            <div class="header-tri">11</div>
+                            кг золота, с этого мы начинали,<br>сейчас мы одни из лидеров рынка
+                        </div>
+                        <div class="col-6"><div class="header-tri">600</div>
+                            более 600 профессионалов<br>работают у нас
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-6">
+                            <div class="header-tri">35</div>
+                            лицензий на разработку<br>приисков
+                        </div>
+                        <div class="col-6"><div class="header-tri">50</div>
+                            более 50% добычи<br>даёт Маристый
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 d-flex justify-content-end">
+                <img src="/img/fp-map.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-white py-5">
+    <div class="container">
+        <div class="row pb-3">
+            <div class="col-12 header">ПРИИСКИ</div>
+        </div>
+        <div class="row pb-4">
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/maristy-pic.jpg'); background-position: center; background-size: cover; height: 250px;"></div>
+                <h2 class="pt-4">ООО МАРИСТЫЙ</h2>
+                С небольшого месторождения на ручье Маристый Тындинского района начиналась деятельность нашей компании, сейчас &mdash; это множество участков, приносящих больше половины всего добытого золота.
+            </div>
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/mogot-pic.jpg'); background-position: center; background-size: cover; height: 250px;"></div>
+                <h2 class="pt-4">ООО МОГОТ</h2>
+                Могот &mdash; второй по значимости прииск компании ХАС ГРУПП в Зейском районе. На данный момент компания имеет 5 лицензий на добычу россыпного золота на этом участке. В планах компании наращивание объёмов и развитие.
+            </div>
+            <div class="col-4">
+                <div class="p-2 pt-4" style="background-image: url('/img/dambuki-pic.jpg'); background-position: center; background-size: cover; height: 250px;"></div>
+                <h2 class="pt-4">ООО ПРИИСК ДАМБУКИ</h2>
+                Самое молодое подразделение ХАС ГРУПП. Компания приобрела приск в плачевном состоянии. Традиции прииска Дамбуки &mdash; это драги. Ведутся работы по восстановлению участка и техники. Цель: вернуться к пиковым показателям.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="p-0 m-0" style="background-color: #e1230f; height: 3px;"></div>
+<div class="container-fluid bg-white" style="background-image: url('/img/appeal-bg.jpg'); background-position: center; background-size: cover; height: 514px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 pe-5 py-5">
+                <div class="header">ОБРАЩЕНИЕ ГЕНЕРАЛЬНОГО</div>
+                <div class="sub-header">ДИРЕКТОРА</div>
+                <div class="pt-2">Сегодня мы одни из лидеров рынка, крупная добывающая компания, объединяющая более 600 профессионалов своего дела. Наша главная ценность &mdash; люди. Компания старается сделать всё, чтобы сотрудник не отвлекался на социальные или иные проблемы. Ведь добыча золото &mdash; это огромный и упорный труд людей и успех компании зависит от старания и эффективности сотрудников. Поэтому компания развивает социальную лояльность, заботится о комфорте и здоровье сотрудников.</div>
+                <div class="pt-3"><span class="float-start justify-content-start"><b>АЙВАЗЯН<br>Ара Владимирович</b></span>
+                    <span class="float-end justify-content-end">
+                        <img src="/img/signature.png">
+                    </span>
+                </div>
+            </div>
+            <div class="col-6 d-flex justify-content-end"></div>
+        </div>
+    </div>
+</div>
+<div class="p-0 m-0" style="background-color: #e1230f; height: 3px;"></div>
+<div class="container-fluid py-5 top-logo">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 ps-2">
+                <img src="/img/logo-bottom.svg" width="130" height="108"/>
+                <div class="p-0 mx-0 my-3" style="background-color: #e1230f; height: 2px; width: 130px;"></div>
+                <div class="float-start">
+                    <p class="text-start">
+                        <a href="tel:+78003020500" class="logo-panel-link">8 800 30-20-500</a><br>
+                        <a href="tel:+74162496777" class="logo-panel-link">(4162) 496-777</a><br>
+                        <a href="https://t.me/?" class="logo-panel-link"><img src="/img/tg-icon.svg" width="20" height="20" class="mt-3 me-2"/></a>
+                        <a href="https://wa.me/?" class="logo-panel-link"><img src="/img/wa-icon.svg" width="20" height="20" class="mt-3 me-2"/></a>
+                        <div class="copyright">&copy; 2023, ООО УК &laquo;ХАС ГРУПП&raquo;</div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-8 container m-0 p-0">
+                <div class="row">
+                    <div class="col-6 bottom-text">
+                        О КОМПАНИИ
+                        <div class="p-0 mx-0 my-3" style="background-color: #e1230f; height: 2px; width: 150px;"></div>
+                        <ul>
+                            <li><a href="/about/history">история предприятия</a></li>
+                            <li><a href="/about/social-responsibility">социальная ответственность</a></li>
+                            <li><a href="/career">вакансии</a></li>
+                            <li><a href="/contacts">контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 bottom-text">
+                        ПРОИЗВОДСТВО
+                        <div class="p-0 mx-0 my-3" style="background-color: #e1230f; height: 2px; width: 150px;"></div>
+                        <ul>
+                            <li><a href="/structure/maristy">ООО Маристый</a></li>
+                            <li><a href="/structure/mogot">ООО Могот</a></li>
+                            <li><a href="/structure/dambuki">ПАО Прииск Дамбуки</a></li>
+                            <li><a href="/about/resources-growth">ресурсы и развитие</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 bottom-text">
+                        <div class="p-0 mx-0 mt-2 mb-3" style="background-color: #e1230f; height: 2px; width: 100%;"></div>
+                        ООО УК "ХАС ГРУПП"<br>
+                        675000, Амурская область, г. Благовещенск, ул. Партизанская 89/1<br>
+                        приемная: <a href="tel:+74162225710">+7 (4162) 225-710</a>, <a href="tel:+74162225711">225-711</a><br>
+                        эл. почта: <a href="mailto:info@khasgroup.ru">info@khasgroup.ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
